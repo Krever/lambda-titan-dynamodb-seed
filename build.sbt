@@ -6,10 +6,13 @@ scalaVersion := "2.11.7"
 
 resolvers += Resolver.mavenLocal
 
+resolvers += "DynamoDBLocal" at "https://s3-us-west-2.amazonaws.com/dynamodb-local/release"
+
+
 libraryDependencies ++= Seq(
   "com.michaelpollmeier"      %% "gremlin-scala"                    % "3.0.2-incubating.1"  exclude("org.slf4j", "jcl-over-slf4j"),
   "com.thinkaurelius.titan"   % "titan-core"                        % "1.0.0",
-  "com.amazonaws"             % "dynamodb-titan100-storage-backend" % "1.0.0",
+  "com.amazonaws"             % "dynamodb-titan100-storage-backend" % "1.0.3",
   "com.amazonaws"             % "aws-lambda-java-core"              % "1.1.0"
 )
 
